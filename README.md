@@ -1,6 +1,6 @@
 # Configs
 
-## Config for chrome redirector
+## Config for chrome [Redirector](https://chrome.google.com/webstore/detail/redirector/pajiegeliagebegjdhebejdlknciafen?hl=en-US)
 
 ### Reddit sort every thread by top comments
 From: ``
