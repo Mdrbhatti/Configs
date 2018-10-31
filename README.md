@@ -17,3 +17,6 @@ $1://$2.reddit.com/$3/comments/$4/?sort=top
 ``
 ### Windows (.bat) shorten specific .mp3
 ``for %%f IN (*.mp3) DO "ffmpeg.exe" -i "%%~nf.mp3" -ss 385 -t 275 -acodec copy "%%~nf.mp3"``
+
+### Windows (.bat) 1080p raw video to 480p downscale best quality
+``for %%f IN (*.mp4) DO "ffmpeg.exe" -i "%%~nf.mp4" -s hd480 -c:v libx264 -r 24 -crf 23 -c:a aac -strict -2 "%%~nf.mp4"``
