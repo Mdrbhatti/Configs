@@ -20,3 +20,6 @@ $1://$2.reddit.com/$3/comments/$4/?sort=top
 
 ### Windows (.bat) 1080p raw video to 480p downscale best quality
 ``for %%f IN (*.mp4) DO "ffmpeg.exe" -i "%%~nf.mp4" -s hd480 -c:v libx264 -r 24 -crf 23 -c:a aac -strict -2 "%%~nf.mp4"``
+
+### Windows (.bat) flv to 720p mp4
+``for %%f IN (*.flv) DO "ffmpeg.exe" -i "%%~nf.flv" -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 "%%~nf.mp4"``
