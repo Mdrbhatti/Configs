@@ -1,15 +1,29 @@
 # Configs
 
-## Config for chrome [Redirector](https://chrome.google.com/webstore/detail/redirector/pajiegeliagebegjdhebejdlknciafen?hl=en-US)
+## Config for chrome [Redirector](https://chrome.google.com/webstore/detail/redirector/ocgpenflpmgnfapjedencafcfakcekcd/related?hl=en-US)
 
 ### Reddit sort every thread by top comments
 From: ``
-^(.*?):\/\/(.*?)\.reddit\.com\/(.*)\/comments/(.*)/(.*)
+^(.*?):\/\/(.*?)\.reddit\.com\/r\/(.*)\/(.*)\/(.*)\/$
 ``
 
 To: ``
-$1://$2.reddit.com/$3/comments/$4/?sort=top
+$1://old.reddit.com/r/$3/$4/$5/?sort=top
 ``
+
+### Reddit redirect to old.reddit
+From: ``
+^(.*?):\/\/(.*?)\.reddit\.com(.*)
+``
+
+To: ``
+$1://old.reddit.com$3
+``
+
+Exclude ``
+^(.*?):\/\/out\.reddit\.com\/r\/(.*)
+``
+
 ## Config for ffmpeg
 
 ### Windows (.bat) convert all .flac to .mp3
